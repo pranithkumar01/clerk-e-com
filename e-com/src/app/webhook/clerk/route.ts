@@ -1,6 +1,7 @@
 import { Webhook } from 'svix'
 import { headers } from 'next/headers'
-import { EmailAddress, WebhookEvent } from '@clerk/nextjs/server'
+import { clerkClient, EmailAddress, WebhookEvent } from '@clerk/nextjs/server'
+import { createUser } from '@/actions/user.actions'
 
 export async function POST(req: Request) {
   const SIGNING_SECRET = process.env.SIGNING_SECRET
@@ -63,6 +64,15 @@ export async function POST(req: Request) {
         last_name:last_name,
       }
       console.log(user)
+      const newUser= await createUser(user)
+      if(newUser){
+        await clerkClient.users.updateUserMetadata(id,{
+          publicMetadata:{
+            userId:newUser._id,
+
+          }
+        })
+      }
   }
 
   
