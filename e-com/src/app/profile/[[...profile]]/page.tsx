@@ -1,26 +1,26 @@
-// import React from 'react'
+import React from 'react'
 // import { UserProfile } from '@clerk/nextjs'
 // import { auth, currentUser } from '@clerk/nextjs/server'
 // // import { Redirect } from 'next'
 // import { redirect } from 'next/dist/server/api-utils'
 
 
-// async function Profile() {
-//     const userId = await auth()
-//     const isAuth= !!userId
-//     const user= await currentUser()
+async function Profile() {
+    // const userId = await auth()
+    // const isAuth= !!userId
+    // const user= await currentUser()
 
-//     if(!isAuth){
-//         redirect("/")
-//     }
+    // if(!isAuth){
+    //     redirect("/")
+    // }
 
-//   return (
-//     <div className='flex flex-col items-center justify-center h-full mt-8'>
-//       <h1 className='text-2xl'>{user?.username}</h1>
-//       <UserProfile/>
-//     </div>
-//   )
-// }
+  return (
+    <div className='flex flex-col items-center justify-center h-full mt-8'>
+{/*       <h1 className='text-2xl'>{user?.username}</h1> */}
+      <UserProfile/>
+    </div>
+  )
+}
 
 // export default Profile
 
@@ -81,28 +81,28 @@
 
 // export default Profile
 
-import { auth, currentUser } from '@clerk/nextjs/server'
+// import { auth, currentUser } from '@clerk/nextjs/server'
 
-export async function getServerSideProps() {
-  const userId = await auth()
-  const isAuth = !!userId
-  const user = await currentUser()
+// export async function getServerSideProps() {
+//   const userId = await auth()
+//   const isAuth = !!userId
+//   const user = await currentUser()
 
-  if (!isAuth) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
-  }
+//   if (!isAuth) {
+//     return {
+//       redirect: {
+//         destination: '/',
+//         permanent: false,
+//       },
+//     }
+//   }
 
-  return {
-    props: {
-      user,
-    },
-  }
-}
+//   return {
+//     props: {
+//       user,
+//     },
+//   }
+// }
 
 
 
