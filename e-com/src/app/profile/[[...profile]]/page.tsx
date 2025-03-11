@@ -1,7 +1,7 @@
 import React from 'react'
 import { UserProfile } from '@clerk/nextjs'
 import { auth, currentUser } from '@clerk/nextjs/server'
-import { Redirect } from 'next'
+// import { Redirect } from 'next'
 import { redirect } from 'next/dist/server/api-utils'
 
 
