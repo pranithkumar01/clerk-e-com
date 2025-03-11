@@ -9,14 +9,14 @@ interface MongooseConn{
     promise: Promise<Mongoose> | null;
 }
 
-let cashed: MongooseConn=(global as any).mongoose;
+// let cashed: MongooseConn=(global as any).mongoose;
 
-if(!cashed){
-    cashed=(global as any).mongoose={
-        conn:null,
-        promise:null,
-    }
-}
+// if(!cashed){
+//     cashed=(global as any).mongoose={
+//         conn:null,
+//         promise:null,
+//     }
+// }
 
 export const connect =async()=>{
 
