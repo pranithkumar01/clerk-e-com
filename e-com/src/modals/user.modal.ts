@@ -1,5 +1,5 @@
-import { Schema,model,models } from "mongoose";
-import { unique } from "next/dist/build/utils";
+import { Schema,model } from "mongoose";
+// import { unique } from "next/dist/build/utils";
 
 const userSchema = new Schema({
     clerkId:{
