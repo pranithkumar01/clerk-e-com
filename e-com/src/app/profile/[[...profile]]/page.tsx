@@ -52,6 +52,8 @@
 
 // export default Profile
 
+"use client"
+
 import React from 'react'
 import { useRouter } from 'next/navigation'
 import { UserProfile } from '@clerk/nextjs'
