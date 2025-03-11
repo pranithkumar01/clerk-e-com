@@ -17,12 +17,12 @@ async function Profile() {
   return (
     <div className='flex flex-col items-center justify-center h-full mt-8'>
 {/*       <h1 className='text-2xl'>{user?.username}</h1> */}
-      <UserProfile/>
+{/*       <UserProfile/> */}
     </div>
   )
 }
 
-// export default Profile
+export default Profile
 
 
 // import React from 'react'
