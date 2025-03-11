@@ -4,19 +4,19 @@ import mongoose,{ Mongoose } from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI!;
 
-// interface MongooseConn{
-//     conn: Mongoose | null;
-//     promise: Promise<Mongoose> | null;
-// }
+interface MongooseConn{
+    conn: Mongoose | null;
+    promise: Promise<Mongoose> | null;
+}
 
-// let cashed: MongooseConn=(global as any).mongoose;
+let cashed: MongooseConn=(global as any).mongoose;
 
-// if(!cashed){
-//     cashed=(global as any).mongoose={
-//         conn:null,
-//         promise:null,
-//     }
-// }
+if(!cashed){
+    cashed=(global as any).mongoose={
+        conn:null,
+        promise:null,
+    }
+}
 
 export const connect =async()=>{
 
